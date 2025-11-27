@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ruleset name="MethorZ Problem Details Coding Standard">
+    <description>The MethorZ Problem Details Coding Standard</description>
+
+    <arg name="basepath" value="."/>
+    <arg name="colors"/>
+    <arg name="cache" value=".phpcs-cache"/>
+    <arg name="parallel" value="150"/>
+
+    <!-- Include the PSR-12 standard -->
+    <rule ref="PSR12"/>
+
+    <!-- Include Laminas Coding Standard -->
+    <config name="installed_paths" value="../../slevomat/coding-standard"/>
+
+    <file>src</file>
+    <file>tests</file>
+</ruleset>

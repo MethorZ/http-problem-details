@@ -1,0 +1,216 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testCatchesExceptionAndReturns500\\(\\) throws checked exception InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testCatchesExceptionAndReturns500\\(\\) throws checked exception JsonException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testCatchesExceptionAndReturns500\\(\\) throws checked exception Laminas\\\\Diactoros\\\\Exception\\\\InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testCatchesExceptionAndReturns500\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testDevelopmentModeIncludesStackTrace\\(\\) throws checked exception InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testDevelopmentModeIncludesStackTrace\\(\\) throws checked exception JsonException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testDevelopmentModeIncludesStackTrace\\(\\) throws checked exception Laminas\\\\Diactoros\\\\Exception\\\\InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testDevelopmentModeIncludesStackTrace\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testHandlesPreviousExceptionChain\\(\\) throws checked exception InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testHandlesPreviousExceptionChain\\(\\) throws checked exception JsonException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testHandlesPreviousExceptionChain\\(\\) throws checked exception Laminas\\\\Diactoros\\\\Exception\\\\InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testHandlesPreviousExceptionChain\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testIncludesExceptionMessageInResponse\\(\\) throws checked exception InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testIncludesExceptionMessageInResponse\\(\\) throws checked exception JsonException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testIncludesExceptionMessageInResponse\\(\\) throws checked exception Laminas\\\\Diactoros\\\\Exception\\\\InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testIncludesExceptionMessageInResponse\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testLogs4xxAsWarningAnd5xxAsError\\(\\) throws checked exception InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testLogs4xxAsWarningAnd5xxAsError\\(\\) throws checked exception JsonException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testLogs4xxAsWarningAnd5xxAsError\\(\\) throws checked exception Laminas\\\\Diactoros\\\\Exception\\\\InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testLogs4xxAsWarningAnd5xxAsError\\(\\) throws checked exception PHPUnit\\\\Event\\\\NoPreviousThrowableException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testLogs4xxAsWarningAnd5xxAsError\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testLogsExceptionWhenLoggerProvided\\(\\) throws checked exception InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testLogsExceptionWhenLoggerProvided\\(\\) throws checked exception JsonException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testLogsExceptionWhenLoggerProvided\\(\\) throws checked exception Laminas\\\\Diactoros\\\\Exception\\\\InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testLogsExceptionWhenLoggerProvided\\(\\) throws checked exception PHPUnit\\\\Event\\\\NoPreviousThrowableException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testLogsExceptionWhenLoggerProvided\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testPassesThroughSuccessfulResponse\\(\\) throws checked exception InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testPassesThroughSuccessfulResponse\\(\\) throws checked exception JsonException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testPassesThroughSuccessfulResponse\\(\\) throws checked exception Laminas\\\\Diactoros\\\\Exception\\\\InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testPassesThroughSuccessfulResponse\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testProductionModeExcludesStackTrace\\(\\) throws checked exception InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testProductionModeExcludesStackTrace\\(\\) throws checked exception JsonException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testProductionModeExcludesStackTrace\\(\\) throws checked exception Laminas\\\\Diactoros\\\\Exception\\\\InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testProductionModeExcludesStackTrace\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testUsesCustomExceptionStatusMap\\(\\) throws checked exception InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testUsesCustomExceptionStatusMap\\(\\) throws checked exception JsonException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testUsesCustomExceptionStatusMap\\(\\) throws checked exception Laminas\\\\Diactoros\\\\Exception\\\\InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Middleware\\\\ErrorHandlerMiddlewareTest\\:\\:testUsesCustomExceptionStatusMap\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Middleware/ErrorHandlerMiddlewareTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Response\\\\ProblemDetailsTest\\:\\:testConvertsToJson\\(\\) throws checked exception JsonException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Response/ProblemDetailsTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Response\\\\ProblemDetailsTest\\:\\:testConvertsToResponse\\(\\) throws checked exception InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Response/ProblemDetailsTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Response\\\\ProblemDetailsTest\\:\\:testConvertsToResponse\\(\\) throws checked exception JsonException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Response/ProblemDetailsTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Response\\\\ProblemDetailsTest\\:\\:testConvertsToResponse\\(\\) throws checked exception Laminas\\\\Diactoros\\\\Exception\\\\InvalidArgumentException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Response/ProblemDetailsTest.php
+
+		-
+			message: "#^Method MethorZ\\\\ProblemDetails\\\\Tests\\\\Unit\\\\Response\\\\ProblemDetailsTest\\:\\:testConvertsToResponse\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
+			count: 1
+			path: tests/Unit/Response/ProblemDetailsTest.php
