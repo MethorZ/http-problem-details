@@ -28,7 +28,7 @@ Production-ready error handling with RFC 7807 Problem Details, environment-aware
 ## 📦 Installation
 
 ```bash
-composer require methorz/mezzio-error-handler
+composer require methorz/http-problem-details
 ```
 
 ---
@@ -38,7 +38,7 @@ composer require methorz/mezzio-error-handler
 ### **Basic Usage**
 
 ```php
-use Methorz\ErrorHandler\Middleware\ErrorHandlerMiddleware;
+use MethorZ\ProblemDetails\Middleware\ErrorHandlerMiddleware;
 use Nyholm\Psr7\Factory\Psr17Factory;
 
 $middleware = new ErrorHandlerMiddleware(
@@ -82,7 +82,7 @@ $app->pipe($middleware);
 ### **With Logger Integration**
 
 ```php
-use Methorz\ErrorHandler\Middleware\ErrorHandlerMiddleware;
+use MethorZ\ProblemDetails\Middleware\ErrorHandlerMiddleware;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Monolog\Logger;
 
@@ -156,7 +156,7 @@ $middleware = new ErrorHandlerMiddleware(
 ### **Building Custom Problem Details**
 
 ```php
-use Methorz\ErrorHandler\Response\ProblemDetails;
+use MethorZ\ProblemDetails\Response\ProblemDetails;
 use Nyholm\Psr7\Response;
 
 $problem = ProblemDetails::create(404, 'Not Found')
@@ -361,7 +361,7 @@ All services return the same RFC 7807 format:
 
 ```php
 // config/autoload/middleware.global.php
-use Methorz\ErrorHandler\Middleware\ErrorHandlerMiddleware;
+use MethorZ\ProblemDetails\Middleware\ErrorHandlerMiddleware;
 
 return [
     'dependencies' => [
@@ -388,7 +388,7 @@ $app->pipe(ErrorHandlerMiddleware::class); // FIRST middleware!
 ### **Slim Framework**
 
 ```php
-use Methorz\ErrorHandler\Middleware\ErrorHandlerMiddleware;
+use MethorZ\ProblemDetails\Middleware\ErrorHandlerMiddleware;
 
 $app->add(new ErrorHandlerMiddleware(
     $responseFactory,
