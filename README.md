@@ -36,10 +36,10 @@ composer require methorz/mezzio-error-handler
 
 ```php
 use Methorz\ErrorHandler\Middleware\ErrorHandlerMiddleware;
-use Laminas\Diactoros\ResponseFactory;
+use Nyholm\Psr7\Factory\Psr17Factory;
 
 $middleware = new ErrorHandlerMiddleware(
-    new ResponseFactory()
+    new Psr17Factory()
 );
 
 // Add to middleware pipeline (first!)
@@ -80,13 +80,13 @@ $app->pipe($middleware);
 
 ```php
 use Methorz\ErrorHandler\Middleware\ErrorHandlerMiddleware;
-use Laminas\Diactoros\ResponseFactory;
+use Nyholm\Psr7\Factory\Psr17Factory;
 use Monolog\Logger;
 
 $logger = new Logger('app');
 
 $middleware = new ErrorHandlerMiddleware(
-    new ResponseFactory(),
+    new Psr17Factory(),
     $logger // PSR-3 logger
 );
 ```
@@ -154,7 +154,7 @@ $middleware = new ErrorHandlerMiddleware(
 
 ```php
 use Methorz\ErrorHandler\Response\ProblemDetails;
-use Laminas\Diactoros\Response;
+use Nyholm\Psr7\Response;
 
 $problem = ProblemDetails::create(404, 'Not Found')
     ->withType('https://api.example.com/problems/user-not-found')
@@ -404,6 +404,22 @@ $app->add(new ErrorHandlerMiddleware(
 
 ---
 
+## 🔗 Related Packages
+
+This package is part of the MethorZ HTTP middleware ecosystem:
+
+| Package | Description |
+|---------|-------------|
+| **[methorz/http-dto](https://github.com/methorz/http-dto)** | Automatic HTTP ↔ DTO conversion with validation |
+| **[methorz/http-problem-details](https://github.com/methorz/http-problem-details)** | RFC 7807 error handling (this package) |
+| **[methorz/http-cache-middleware](https://github.com/methorz/http-cache-middleware)** | HTTP caching with ETag support |
+| **[methorz/http-request-logger](https://github.com/methorz/http-request-logger)** | Structured logging with request tracking |
+| **[methorz/openapi-generator](https://github.com/methorz/openapi-generator)** | Automatic OpenAPI spec generation |
+
+These packages work together seamlessly in PSR-15 applications.
+
+---
+
 ## 💡 Best Practices
 
 ### **DO**
@@ -454,7 +470,8 @@ Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 🔗 Links
 
-- [Documentation](docs/)
 - [Changelog](CHANGELOG.md)
-- [Issues](https://github.com/MethorZ/mezzio-error-handler/issues)
+- [Contributing](CONTRIBUTING.md)
+- [Security](SECURITY.md)
+- [Issues](https://github.com/MethorZ/http-problem-details/issues)
 

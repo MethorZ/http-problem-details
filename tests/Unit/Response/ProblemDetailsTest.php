@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MethorZ\ProblemDetails\Tests\Unit\Response;
 
-use Laminas\Diactoros\Response;
+use Nyholm\Psr7\Response;
 use MethorZ\ProblemDetails\Response\ProblemDetails;
 use PHPUnit\Framework\TestCase;
 

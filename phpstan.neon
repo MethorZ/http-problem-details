@@ -7,13 +7,8 @@ parameters:
         - src
         - tests
 
-    # Modern PHPStan settings for maximum strictness
-    checkMissingIterableValueType: true
-    checkGenericClassInNonGenericObjectType: true
+    # PHPStan 2.x: Most strict checks are now default at level 9
     checkBenevolentUnionTypes: true
-    checkUninitializedProperties: true
-    checkImplicitMixed: true
-    checkDynamicProperties: true
     reportMaybesInMethodSignatures: true
     reportStaticMethodSignatures: true
 

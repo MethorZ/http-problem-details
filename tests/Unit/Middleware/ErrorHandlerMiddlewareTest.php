@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace MethorZ\ProblemDetails\Tests\Unit\Middleware;
 
-use Laminas\Diactoros\ResponseFactory;
-use Laminas\Diactoros\ServerRequest;
+use Nyholm\Psr7\Factory\Psr17Factory;
+use Nyholm\Psr7\ServerRequest;
 use MethorZ\ProblemDetails\Middleware\ErrorHandlerMiddleware;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
@@ -17,9 +17,9 @@ final class ErrorHandlerMiddlewareTest extends TestCase
 {
     public function testPassesThroughSuccessfulResponse(): void
     {
-        $middleware = new ErrorHandlerMiddleware(new ResponseFactory());
-        $request = new ServerRequest([], [], '/test', 'GET');
-        $expectedResponse = (new ResponseFactory())->createResponse(200);
+        $middleware = new ErrorHandlerMiddleware(new Psr17Factory());
+        $request = new ServerRequest('GET', '/test');
+        $expectedResponse = (new Psr17Factory())->createResponse(200);
 
         $handler = $this->createHandler($expectedResponse);
 
@@ -30,8 +30,8 @@ final class ErrorHandlerMiddlewareTest extends TestCase
 
     public function testCatchesExceptionAndReturns500(): void
     {
-        $middleware = new ErrorHandlerMiddleware(new ResponseFactory());
-        $request = new ServerRequest([], [], '/test', 'GET');
+        $middleware = new ErrorHandlerMiddleware(new Psr17Factory());
+        $request = new ServerRequest('GET', '/test');
         $handler = $this->createThrowingHandler(new \RuntimeException('Test error'));
 
         $result = $middleware->process($request, $handler);
@@ -42,8 +42,8 @@ final class ErrorHandlerMiddlewareTest extends TestCase
 
     public function testIncludesExceptionMessageInResponse(): void
     {
-        $middleware = new ErrorHandlerMiddleware(new ResponseFactory());
-        $request = new ServerRequest([], [], '/test', 'GET');
+        $middleware = new ErrorHandlerMiddleware(new Psr17Factory());
+        $request = new ServerRequest('GET', '/test');
         $handler = $this->createThrowingHandler(new \RuntimeException('Custom error message'));
 
         $result = $middleware->process($request, $handler);
@@ -73,8 +73,8 @@ final class ErrorHandlerMiddlewareTest extends TestCase
                 }),
             );
 
-        $middleware = new ErrorHandlerMiddleware(new ResponseFactory(), $mockLogger);
-        $request = new ServerRequest([], [], '/test', 'GET');
+        $middleware = new ErrorHandlerMiddleware(new Psr17Factory(), $mockLogger);
+        $request = new ServerRequest('GET', '/test');
         $handler = $this->createThrowingHandler(new \RuntimeException('Test error'));
 
         $middleware->process($request, $handler);
@@ -83,11 +83,11 @@ final class ErrorHandlerMiddlewareTest extends TestCase
     public function testDevelopmentModeIncludesStackTrace(): void
     {
         $middleware = new ErrorHandlerMiddleware(
-            new ResponseFactory(),
+            new Psr17Factory(),
             isDevelopment: true,
         );
 
-        $request = new ServerRequest([], [], '/test', 'GET');
+        $request = new ServerRequest('GET', '/test');
         $handler = $this->createThrowingHandler(new \RuntimeException('Test error'));
 
         $result = $middleware->process($request, $handler);
@@ -104,11 +104,11 @@ final class ErrorHandlerMiddlewareTest extends TestCase
     public function testProductionModeExcludesStackTrace(): void
     {
         $middleware = new ErrorHandlerMiddleware(
-            new ResponseFactory(),
+            new Psr17Factory(),
             isDevelopment: false,
         );
 
-        $request = new ServerRequest([], [], '/test', 'GET');
+        $request = new ServerRequest('GET', '/test');
         $handler = $this->createThrowingHandler(new \RuntimeException('Test error'));
 
         $result = $middleware->process($request, $handler);
@@ -125,13 +125,13 @@ final class ErrorHandlerMiddlewareTest extends TestCase
     public function testUsesCustomExceptionStatusMap(): void
     {
         $middleware = new ErrorHandlerMiddleware(
-            new ResponseFactory(),
+            new Psr17Factory(),
             exceptionStatusMap: [
                 \InvalidArgumentException::class => 400,
             ],
         );
 
-        $request = new ServerRequest([], [], '/test', 'GET');
+        $request = new ServerRequest('GET', '/test');
         $handler = $this->createThrowingHandler(new \InvalidArgumentException('Bad input'));
 
         $result = $middleware->process($request, $handler);
@@ -142,14 +142,14 @@ final class ErrorHandlerMiddlewareTest extends TestCase
     public function testHandlesPreviousExceptionChain(): void
     {
         $middleware = new ErrorHandlerMiddleware(
-            new ResponseFactory(),
+            new Psr17Factory(),
             isDevelopment: true,
         );
 
         $previous = new \RuntimeException('Root cause');
         $exception = new \RuntimeException('Main error', 0, $previous);
 
-        $request = new ServerRequest([], [], '/test', 'GET');
+        $request = new ServerRequest('GET', '/test');
         $handler = $this->createThrowingHandler($exception);
 
         $result = $middleware->process($request, $handler);
@@ -173,14 +173,14 @@ final class ErrorHandlerMiddlewareTest extends TestCase
             ->with('warning');
 
         $middleware = new ErrorHandlerMiddleware(
-            new ResponseFactory(),
+            new Psr17Factory(),
             $mockLogger,
             exceptionStatusMap: [
                 \InvalidArgumentException::class => 400,
             ],
         );
 
-        $request = new ServerRequest([], [], '/test', 'GET');
+        $request = new ServerRequest('GET', '/test');
         $handler = $this->createThrowingHandler(new \InvalidArgumentException('Bad request'));
 
         $middleware->process($request, $handler);
