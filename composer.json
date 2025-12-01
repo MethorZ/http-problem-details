@@ -30,7 +30,7 @@
     "require-dev": {
         "nyholm/psr7": "^1.8",
         "phpstan/phpstan": "^2.0",
-        "phpunit/phpunit": "^12.0",
+        "phpunit/phpunit": "^11.0 || ^12.0",
         "slevomat/coding-standard": "^8.25",
         "squizlabs/php_codesniffer": "^4.0"
     },
